@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu_slide">
+            <h1>Playlist</h1>
+            <div class="playlist">
+                <h4 class="h4 active"><span></span><i class="fa-solid fa-music"></i> Playlist</h4>
+                <h4 class="h4 " style="margin-top:5px"><span></span><i class="fa-solid fa-music"></i> Recommended</h4>
+            </div>
+            <div class="menu_song">
+            </div>
+        </div>
+        <div class="song_side">
+            <div class="content">
+                <div class="songInformation">
+                    <h1 id="songTitle">Mood</h1>
+                    <h4 id="songArtist">24kgoldn</h4>
+                    <p id="songLyrics">Why you always in a mood?Fuckin' 'round, actin' brand newI ain't tryna tell you
+                        what to doBut try to play it cool...</p>
+                    <div class="buttons">
+                        <button id="addToPlaylist">Add to Playlist</button>
+                        <button id="follow">Follow</button>
+                    </div>
+                </div>
+                <div id="artistImage" class="artistImage"></div>
+            </div>
+            <div class="popular_song">
+                <div>
+                    <h4>Popular songs</h4>
+                </div>
+                <div class="pop_song">
+                </div>
+
+            </div>
+            <div class="popular_artist">
+                <div>
+                    <h4>Popular artists</h4>
+                </div>
+                <div class="items">
+                </div>
+            </div>
+        </div>
+        <div class="master_play">
+            <div class="wave">
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+            </div>
+            <div class="info">
+                <img class="playingSongImage" src="images/mood.png"></img>
+                <h5><span id="title">Mood</span>
+                    <div class="subtitle" id="subtitle">Jistin Bieber ft J Balvin</div>
+                </h5>
+            </div>
+            <div class="songControlicon">
+                <i class="icon fa-solid fa-arrow-rotate-left" id="repeat"></i>
+                <i class="icon fa-solid fa-backward-step" id="back"></i>
+                <i class="icon fa-solid fa-play" id="masterPlay"></i>
+                <i class="icon fa-solid fa-forward-step" id="next"></i>
+            </div>
+            <span id="currentStart">00:00</span>
+            <div class="bar">
+                <input type="range" id="seek" min="0" value="0" max="100">
+                <div class="bar2" id="bar2"></div>
+                <div class="dot"></div>
+            </div>
+            <span id="currentEnd">00:00</span>
+            <div class="vol">
+                <i class="fa-solid fa-volume-low" style="font-size:15px" id="vol_icon"></i>
+                <input type="range" id="vol" min="0" value="50" max="100">
+                <div class="vol_bar"></div>
+                <div class="dot" id="vol_dot"></div>
+            </div>
+        </div>
+    </header>
+    <script src="app.js"></script>
+</body>
+
+</html>
